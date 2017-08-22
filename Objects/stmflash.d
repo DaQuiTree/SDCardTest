@@ -1,0 +1,11 @@
+.\objects\stmflash.o: USR\stmflash.c
+.\objects\stmflash.o: USR\stmflash.h
+.\objects\stmflash.o: .\System\stm32f10x.h
+.\objects\stmflash.o: .\System\core_cm3.h
+.\objects\stmflash.o: F:\uKeil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stmflash.o: .\System\system_stm32f10x.h
+.\objects\stmflash.o: .\Lib\inc\stm32f10x_conf.h
+.\objects\stmflash.o: .\Lib\inc\stm32f10x_gpio.h
+.\objects\stmflash.o: .\System\stm32f10x.h
+.\objects\stmflash.o: .\Lib\inc\stm32f10x_rcc.h
+.\objects\stmflash.o: .\Lib\inc\stm32f10x_flash.h

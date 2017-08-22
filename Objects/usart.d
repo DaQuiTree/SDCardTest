@@ -1,0 +1,13 @@
+.\objects\usart.o: USR\usart.c
+.\objects\usart.o: USR\usart.h
+.\objects\usart.o: F:\uKeil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usart.o: .\Lib\inc\stm32f10x_rcc.h
+.\objects\usart.o: .\System\stm32f10x.h
+.\objects\usart.o: .\System\core_cm3.h
+.\objects\usart.o: F:\uKeil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usart.o: .\System\system_stm32f10x.h
+.\objects\usart.o: .\Lib\inc\stm32f10x_conf.h
+.\objects\usart.o: .\Lib\inc\stm32f10x_gpio.h
+.\objects\usart.o: .\System\stm32f10x.h
+.\objects\usart.o: .\Lib\inc\stm32f10x_rcc.h
+.\objects\usart.o: .\Lib\inc\stm32f10x_usart.h
