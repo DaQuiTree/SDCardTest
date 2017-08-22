@@ -1,0 +1,10 @@
+.\objects\stm32f10x_dma.o: Lib\SRC\stm32f10x_dma.c
+.\objects\stm32f10x_dma.o: .\Lib\inc\stm32f10x_dma.h
+.\objects\stm32f10x_dma.o: .\System\stm32f10x.h
+.\objects\stm32f10x_dma.o: .\System\core_cm3.h
+.\objects\stm32f10x_dma.o: F:\uKeil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f10x_dma.o: .\System\system_stm32f10x.h
+.\objects\stm32f10x_dma.o: .\Lib\inc\stm32f10x_conf.h
+.\objects\stm32f10x_dma.o: .\Lib\inc\stm32f10x_gpio.h
+.\objects\stm32f10x_dma.o: .\System\stm32f10x.h
+.\objects\stm32f10x_dma.o: .\Lib\inc\stm32f10x_rcc.h

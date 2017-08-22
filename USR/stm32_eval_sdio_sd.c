@@ -191,6 +191,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32_eval_sdio_sd.h"
+#include "dksd.h"
 
 /** @addtogroup Utilities
   * @{

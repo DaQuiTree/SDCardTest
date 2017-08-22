@@ -1,0 +1,12 @@
+.\objects\stm32_eval_sdio_sd.o: USR\stm32_eval_sdio_sd.c
+.\objects\stm32_eval_sdio_sd.o: USR\stm32_eval_sdio_sd.h
+.\objects\stm32_eval_sdio_sd.o: .\System\stm32f10x.h
+.\objects\stm32_eval_sdio_sd.o: .\System\core_cm3.h
+.\objects\stm32_eval_sdio_sd.o: F:\uKeil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32_eval_sdio_sd.o: .\System\system_stm32f10x.h
+.\objects\stm32_eval_sdio_sd.o: .\Lib\inc\stm32f10x_conf.h
+.\objects\stm32_eval_sdio_sd.o: .\Lib\inc\stm32f10x_gpio.h
+.\objects\stm32_eval_sdio_sd.o: .\System\stm32f10x.h
+.\objects\stm32_eval_sdio_sd.o: .\Lib\inc\stm32f10x_rcc.h
+.\objects\stm32_eval_sdio_sd.o: .\Lib\inc\stm32f10x_sdio.h
+.\objects\stm32_eval_sdio_sd.o: USR\dksd.h

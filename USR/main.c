@@ -22,6 +22,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
 #include "stm32_eval_sdio_sd.h"
+#include "misc.h"
+#include "usart.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Examples
   * @{
@@ -76,21 +78,15 @@ int main(void)
        file (startup_stm32f10x_xx.s) before to branch to application main.
        To reconfigure the default setting of SystemInit() function, refer to
        system_stm32f10x.c file
-     */
-
-  /* Initialize LEDs available on STM3210X-EVAL board *************************/
-  STM_EVAL_LEDInit(LED1);
-  STM_EVAL_LEDInit(LED2);
-  STM_EVAL_LEDInit(LED3);
-  STM_EVAL_LEDInit(LED4);  
+     */ 
 
   /* Interrupt Config */
   NVIC_Configuration();
-
+  ConfigurePrintf();
   /*------------------------------ SD Init ---------------------------------- */
   if((Status = SD_Init()) != SD_OK)
   {
-    STM_EVAL_LEDOn(LED4); 
+   // printf("Init NOT ok!"); 
   }
         
   while((Status == SD_OK) && (SDCardOperation != SD_OPERATION_END) && (SD_Detect()== SD_PRESENT))
@@ -101,23 +97,24 @@ int main(void)
       case (SD_OPERATION_ERASE):
       {
         SD_EraseTest();
-        SDCardOperation = SD_OPERATION_BLOCK;
+        SDCardOperation = SD_OPERATION_MULTI_BLOCK; 
         break;
       }
       /*-------------------------- SD Single Block Test --------------------- */
-      case (SD_OPERATION_BLOCK):
+     /* case (SD_OPERATION_BLOCK):
       {
         SD_SingleBlockTest();
-        SDCardOperation = SD_OPERATION_MULTI_BLOCK;
+        //SDCardOperation = SD_OPERATION_MULTI_BLOCK;
+          SDCardOperation = SD_OPERATION_END;
         break;
-      }       
+      }*/       
       /*-------------------------- SD Multi Blocks Test --------------------- */
       case (SD_OPERATION_MULTI_BLOCK):
       {
         SD_MultiBlockTest();
         SDCardOperation = SD_OPERATION_END;
         break;
-      }              
+      }             
     }
   }
   
@@ -178,12 +175,11 @@ void SD_EraseTest(void)
   
   if(EraseStatus == PASSED)
   {
-    STM_EVAL_LEDOn(LED1);
+ //   printf("Erase Passed\n"); 
   }
   else
   {
-    STM_EVAL_LEDOff(LED1);
-    STM_EVAL_LEDOn(LED4);    
+  //  printf("Erase Failed\n");     
   }
 }
 
@@ -224,12 +220,11 @@ void SD_SingleBlockTest(void)
   
   if(TransferStatus1 == PASSED)
   {
-    STM_EVAL_LEDOn(LED2);
+   // printf("Singlewrite Passed\n"); 
   }
   else
   {
-    STM_EVAL_LEDOff(LED2);
-    STM_EVAL_LEDOn(LED4);    
+   // printf("Singlewrite Failed\n");    
   }
 }
 
@@ -260,6 +255,7 @@ void SD_MultiBlockTest(void)
     /* Check if the Transfer is finished */
     Status = SD_WaitReadOperation();
     while(SD_GetStatus() != SD_TRANSFER_OK);
+    printf("%s",Buffer_MultiBlock_Rx);
   }
 
   /* Check the correctness of written data */
@@ -270,12 +266,11 @@ void SD_MultiBlockTest(void)
   
   if(TransferStatus2 == PASSED)
   {
-    STM_EVAL_LEDOn(LED3);
+   // printf("Multiwrite Passed\n");
   }
   else
   {
-    STM_EVAL_LEDOff(LED3);
-    STM_EVAL_LEDOn(LED4);    
+  //  printf("Multiwrite Failed\n");   
   }
 }
 
@@ -316,7 +311,8 @@ void Fill_Buffer(uint8_t *pBuffer, uint32_t BufferLength, uint32_t Offset)
   /* Put in global buffer same values */
   for (index = 0; index < BufferLength; index++)
   {
-    pBuffer[index] = index + Offset;
+    //pBuffer[index] = index + Offset;
+      pBuffer[index] = index%24 + 'a';
   }
 }
 

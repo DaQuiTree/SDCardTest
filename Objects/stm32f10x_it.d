@@ -8,5 +8,5 @@
 .\objects\stm32f10x_it.o: .\Lib\inc\stm32f10x_gpio.h
 .\objects\stm32f10x_it.o: .\System\stm32f10x.h
 .\objects\stm32f10x_it.o: .\Lib\inc\stm32f10x_rcc.h
-.\objects\stm32f10x_it.o: .\Lib\inc\stm32f10x_exti.h
-.\objects\stm32f10x_it.o: .\Lib\inc\misc.h
+.\objects\stm32f10x_it.o: USR\stm32_eval_sdio_sd.h
+.\objects\stm32f10x_it.o: .\Lib\inc\stm32f10x_sdio.h

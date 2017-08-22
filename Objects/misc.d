@@ -1,0 +1,10 @@
+.\objects\misc.o: Lib\SRC\misc.c
+.\objects\misc.o: .\Lib\inc\misc.h
+.\objects\misc.o: .\System\stm32f10x.h
+.\objects\misc.o: .\System\core_cm3.h
+.\objects\misc.o: F:\uKeil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\misc.o: .\System\system_stm32f10x.h
+.\objects\misc.o: .\Lib\inc\stm32f10x_conf.h
+.\objects\misc.o: .\Lib\inc\stm32f10x_gpio.h
+.\objects\misc.o: .\System\stm32f10x.h
+.\objects\misc.o: .\Lib\inc\stm32f10x_rcc.h

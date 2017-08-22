@@ -1,0 +1,12 @@
+.\objects\dksd.o: USR\dksd.c
+.\objects\dksd.o: .\System\stm32f10x.h
+.\objects\dksd.o: .\System\core_cm3.h
+.\objects\dksd.o: F:\uKeil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\dksd.o: .\System\system_stm32f10x.h
+.\objects\dksd.o: .\Lib\inc\stm32f10x_conf.h
+.\objects\dksd.o: .\Lib\inc\stm32f10x_gpio.h
+.\objects\dksd.o: .\System\stm32f10x.h
+.\objects\dksd.o: .\Lib\inc\stm32f10x_rcc.h
+.\objects\dksd.o: .\Lib\inc\stm32f10x_sdio.h
+.\objects\dksd.o: .\Lib\inc\stm32f10x_dma.h
+.\objects\dksd.o: USR\dksd.h

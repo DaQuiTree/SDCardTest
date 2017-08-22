@@ -3,6 +3,7 @@
 
 #include "stdio.h"
 
-void ConfigureUARTFive(void);
+void ConfigurePrintf(void);
 
 #endif
+
